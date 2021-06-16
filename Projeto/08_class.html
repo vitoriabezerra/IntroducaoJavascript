@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(name){
+                this.name=name;
+            }
+        
+            hello () {
+                console.log(`Welcome ${this.name}`);
+            }
+        }
+
+        class Age extends Person{
+            constructor (name, age){
+                super(name);
+                this.name = name;
+                this.age = age;
+
+            }
+
+            showAge() {
+                console.log(`Hello ${this.name}, your age is ${this.age}`);
+            }
+        }
+
+
+        const vitoria = new Person('Vitoria');
+        const vitoriaAge = new Age('Vitoria', '23');
+        vitoriaAge.showAge();
+
+    </script>
+</body>
+</html>
