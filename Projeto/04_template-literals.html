@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Literals</title>
+</head>
+<body>
+    <div></div>
+    <script>
+        const person ={
+            name: "Vitória",
+            lastName: "Bezerra"
+        };
+
+        const name = 'vitoria';
+        const lastName = 'bezerra';
+
+        console.log(person);
+        console.log(`Meu nome é ${name} e meu sobrenome é ${lastName}`);
+        console.log(`Meu nome é ${person.name} e meu sobrenome é ${person.lastName}`);
+
+        const courses = ['Javascript', 'Java', 'Python', 'Ruby', 'Go']
+
+        const tagTemplate = `
+        <ul>
+          ${
+              courses.map(course => `<li>${course}</li>`).join(' ')
+            }
+        </ul>
+      `
+
+      const body = document.querySelector('div')
+      body.innerHTML = tagTemplate
+
+    </script>
+    
+</body>
+</html>
